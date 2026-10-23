@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>MAGAL — Atelier × v5</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
+<script src="magal-i18n.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#231f20;-webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:hover{color:#7f2d2d}
+::selection{background:#7f2d2d;color:#fff}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" data-screen-label="Mix" style="position:relative;overflow-x:clip;background:#fff;color:#231f20;font-family:'Nunito Sans','Avenir LT Pro',Avenir,sans-serif">
+
+<div data-intro="1" style="position:fixed;inset:0;z-index:100;background:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none">
+  <div style="display:flex;gap:0.5em;font-weight:200;font-size:clamp(32px,5vw,64px);letter-spacing:0.1em;color:#231f20">
+    <span data-intro-l="1">M</span><span data-intro-l="1">A</span><span data-intro-l="1">G</span><span data-intro-l="1">A</span><span data-intro-l="1">L</span>
+  </div>
+</div>
+
+<section id="top" data-screen-label="Hero" style="position:relative;height:100vh;min-height:640px;background:#0d0c0c;color:#fff;overflow:hidden">
+  <div style="position:absolute;top:0;left:0;right:0;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:80px;padding:0 clamp(20px,4vw,56px)">
+    <span></span>
+    <span style="font-weight:300;letter-spacing:0.62em;font-size:18px;padding-left:0.62em">MAGAL</span>
+    <div style="display:flex;justify-content:end"><a href="{{ waLink }}" target="_blank" style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#fff;white-space:nowrap;border:1px solid #fff;padding:10px 18px" style-hover="background:#fff;color:#0d0c0c">Enquire</a></div>
+  </div>
+  <div data-hero-word="1" style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-weight:200;font-size:23vw;line-height:1;letter-spacing:0.06em;color:rgba(255,255,255,0.07);white-space:nowrap;pointer-events:none;user-select:none">MAGAL</div>
+  <div data-hero-img="1" style="position:absolute;left:50%;top:50%;width:min(44vh,82vw);aspect-ratio:773/1160;transform:translate(-50%,-50%);-webkit-mask-image:radial-gradient(ellipse 60% 62% at 50% 48%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 62% at 50% 48%,#000 55%,transparent 100%)">
+    <img src="img376.webp" alt="MAGAL watch presented in its red case" style="width:100%;height:100%;object-fit:cover;display:block" decoding="async" fetchpriority="high">
+  </div>
+  <div style="position:absolute;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(28px,5vh,56px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap">
+    <div>
+      <h1 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(56px,8vw,128px);line-height:0.9;letter-spacing:0.32em;color:#fff">MAGAL</h1>
+      <p data-reveal="up" style="margin:18px 0 0;font-weight:300;font-size:clamp(20px,2.2vw,32px);line-height:1.2;letter-spacing:0.02em;font-style:italic">“Tempus omnia revelat”</p>
+    </div>
+    <div data-reveal="up" style="display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.7)">
+      <span>Time reveals everything</span>
+      <span style="width:56px;height:1px;background:rgba(255,255,255,0.5)"></span>
+      <span>Scroll</span>
+    </div>
+  </div>
+</section>
+
+<nav style="position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:stretch;background:#fff;border-bottom:1px solid #231f20;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;height:64px">
+  <a href="#top" style="padding:0 clamp(16px,2.5vw,32px);font-size:16px;font-weight:300;letter-spacing:0.5em;display:flex;align-items:center;border-right:1px solid #e2e2e2">MAGAL</a>
+  <div style="display:{{ navLinks }};flex:1;align-items:stretch">
+    <a href="#collection" style="padding:0 clamp(16px,2.5vw,32px);display:flex;align-items:center;border-right:1px solid #e2e2e2">01 Collection</a>
+    <a href="#anatomy" style="padding:0 clamp(16px,2.5vw,32px);display:flex;align-items:center;border-right:1px solid #e2e2e2">02 Anatomy</a>
+    <a href="#straps" style="padding:0 clamp(16px,2.5vw,32px);display:flex;align-items:center;border-right:1px solid #e2e2e2">03 Straps</a>
+  </div>
+  <a href="{{ waLink }}" target="_blank" style="padding:0 clamp(16px,2.5vw,32px);background:#7f2d2d;color:#fff;display:flex;align-items:center" style-hover="background:#5c1f1f;color:#fff">Enquire →</a>
+</nav>
+
+<section data-screen-label="Sheet" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-bottom:1px solid #e2e2e2">
+  <div style="padding:clamp(24px,3vw,40px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:32px;border-right:1px solid #e2e2e2">
+    <span data-reveal="up" style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#7f2d2d">New arrival</span>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h2 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(44px,5vw,72px);line-height:0.95;letter-spacing:0.06em;text-transform:uppercase">Fecit<br>Potentiam</h2>
+      <span data-reveal="up" style="font-weight:300;font-style:italic;font-size:19px;color:#7f2d2d">“For the purists, only the purest”</span>
+      <span data-reveal="up" style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">42 mm · Automatic · Sapphire</span>
+    </div>
+  </div>
+  <div style="position:relative;background:#fff;height:clamp(460px,calc(100svh - 64px),820px);overflow:hidden">
+    <img loading="lazy" decoding="async" src="img549.webp" alt="MAGAL Fecit Potentiam, red crocodile strap" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+  </div>
+  <div style="padding:clamp(24px,3vw,40px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;justify-content:flex-end;border-left:1px solid #e2e2e2">
+    <sc-for list="{{ heroSpecs }}" as="s" hint-placeholder-count="4">
+      <div data-reveal="up" style="display:flex;flex-direction:column;gap:4px;padding:14px 0;border-top:1px solid #e2e2e2"><span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">{{ s.k }}</span><span style="font-size:15px">{{ s.v }}</span></div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Manifesto" data-manifesto="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));border-bottom:1px solid #e2e2e2">
+  <span style="padding:clamp(32px,5vw,64px) clamp(16px,2.5vw,32px) 0;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#7f2d2d">00 — Manifesto</span>
+  <div style="grid-column:span 3;min-width:0;padding:clamp(16px,5vw,64px) clamp(16px,2.5vw,32px) clamp(40px,6vw,80px);border-left:1px solid #e2e2e2">
+    <p style="margin:0;font-weight:300;font-size:clamp(22px,2.4vw,34px);line-height:1.3;display:flex;flex-wrap:wrap;gap:0 0.28em;max-width:34ch">
+      <sc-for list="{{ words }}" as="w" hint-placeholder-count="20">
+        <span data-w="1" style="opacity:0.14;transition:opacity 0.25s linear">{{ w }}</span>
+      </sc-for>
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid #231f20">
+      <sc-for list="{{ founders }}" as="f" hint-placeholder-count="3">
+        <div data-reveal="up" style="padding:20px 16px 0 0;border-right:1px solid #e2e2e2;padding-left:16px">
+          <span style="display:block;font-weight:200;font-size:clamp(36px,4.4vw,64px);line-height:1">{{ f.k }}</span>
+          <span style="display:block;margin-top:10px;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">{{ f.v }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="anatomy" data-screen-label="Anatomy" data-show="1" style="position:relative;height:320vh;border-bottom:1px solid #e2e2e2">
+  <div style="position:sticky;top:64px;height:calc(100vh - 64px);overflow:hidden;display:grid;grid-template-columns:{{ showCols }}">
+    <div style="padding:clamp(20px,3vw,40px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;gap:12px;border-right:1px solid #e2e2e2;position:{{ abs }};top:0;left:0;z-index:2">
+      <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#7f2d2d">02 — Anatomy</span>
+      <span data-counter="1" style="font-weight:200;font-size:clamp(48px,6vw,96px);line-height:1;font-variant-numeric:tabular-nums">01</span>
+      <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#6b6b6b">/ 03</span>
+    </div>
+    <div style="position:relative;background:#f1f1f1;display:flex;align-items:center;justify-content:center;overflow:hidden;height:100%">
+      <div data-show-ring="1" style="position:absolute;width:min(46vw,70vh);aspect-ratio:1;border:1px dashed #bdbdbd;border-radius:50%"></div>
+      <img data-show-watch="1" src="img373.webp" alt="MAGAL Puella, Surge" style="height:{{ watchH }};width:auto;max-width:none;position:relative;pointer-events:none" decoding="async" fetchpriority="high">
+      <sc-for list="{{ anatomy }}" as="a" hint-placeholder-count="3">
+        <div data-mark="{{ $index }}" style="position:absolute;left:{{ a.x }};top:{{ a.y }};display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;opacity:0.25;transition:opacity 0.4s"><span style="width:9px;height:9px;border-radius:50%;background:#7f2d2d"></span><span>{{ a.tag }}</span></div>
+      </sc-for>
+    </div>
+    <div style="padding:clamp(20px,3vw,40px) clamp(16px,2.5vw,32px);border-left:1px solid #e2e2e2;position:{{ abs }};left:0;right:0;bottom:0;background:{{ calloutBg }};z-index:2">
+      <div style="position:relative;height:{{ calloutH }}">
+        <sc-for list="{{ anatomy }}" as="a" hint-placeholder-count="3">
+          <div data-step="{{ $index }}" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;opacity:0">
+            <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">{{ a.k }}</span>
+            <span style="margin-top:12px;font-weight:300;font-size:clamp(26px,2.6vw,38px);line-height:1.1">{{ a.t }}</span>
+            <span style="margin-top:14px;font-size:15px;line-height:26px;color:#474747">{{ a.d }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Movement" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));border-bottom:1px solid #e2e2e2">
+  <div style="padding:clamp(32px,4vw,56px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+    <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#7f2d2d">03 — Movement</span>
+    <h2 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(40px,4.4vw,64px);line-height:1">The heart,<br>always<br>in sight.</h2>
+  </div>
+  <div style="grid-column:span 3;min-width:0;position:relative;height:clamp(380px,70vh,720px);overflow:hidden;background:#231f20">
+    <img loading="lazy" decoding="async" data-parallax-img="0.18" src="img392.webp" alt="Open-worked case back revealing the movement" style="position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;display:block">
+  </div>
+</section>
+
+<section id="collection" data-screen-label="Collection">
+  <div style="padding:clamp(40px,5vw,64px) clamp(16px,2.5vw,32px) 24px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:end">
+    <h2 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(36px,5vw,72px);line-height:1">04 — Collection</h2>
+    <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#6b6b6b">Three watches · One octagon</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-top:1px solid #231f20;border-bottom:1px solid #e2e2e2">
+    <sc-for list="{{ collections }}" as="c" hint-placeholder-count="3">
+      <article style="display:flex;flex-direction:column;border-right:1px solid #e2e2e2;min-width:0">
+        <div style="position:relative;height:clamp(380px,42vw,560px);background:#f1f1f1;overflow:hidden;border-bottom:1px solid #e2e2e2">
+          <span style="position:absolute;top:16px;left:16px;z-index:1;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">{{ c.num }} — {{ c.size }}</span>
+          <span style="position:absolute;bottom:16px;right:16px;z-index:1;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#6b6b6b">{{ c.activeName }}</span>
+          <sc-for list="{{ c.variants }}" as="v" hint-placeholder-count="1">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:{{ v.opacity }};transform:{{ v.transform }};transition:opacity 0.7s ease,transform 1s cubic-bezier(.2,.7,.2,1)">
+              <img loading="lazy" decoding="async" src="{{ v.src }}" alt="{{ v.alt }}" style="height:{{ c.imgH }};width:auto;max-width:none;pointer-events:none">
+            </div>
+          </sc-for>
+        </div>
+        <div style="padding:24px 16px;display:flex;flex-direction:column;gap:12px;flex:1">
+          <h3 style="margin:0;font-weight:200;font-size:clamp(26px,2.4vw,34px);line-height:1;letter-spacing:0.1em;text-transform:uppercase">{{ c.name }}</h3>
+          <p style="margin:0;font-weight:300;font-style:italic;font-size:17px;color:#7f2d2d">“{{ c.motto }}”</p>
+          <div style="margin-top:8px;border-top:1px solid #231f20">
+            <sc-for list="{{ c.specs }}" as="s" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid #e2e2e2;font-size:13px;line-height:19px"><span style="letter-spacing:0.2em;text-transform:uppercase;font-size:10px;color:#6b6b6b">{{ s.k }}</span><span>{{ s.v }}</span></div>
+            </sc-for>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto;padding-top:16px;flex-wrap:wrap">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ c.variants }}" as="v" hint-placeholder-count="3">
+                <button type="button" onClick="{{ v.pick }}" aria-label="{{ v.name }}" style="width:28px;height:28px;border-radius:50%;padding:3px;background:transparent;cursor:pointer;border:1px solid {{ v.ring }}" style-hover="border-color:#7f2d2d">
+                  <span style="display:block;width:100%;height:100%;border-radius:50%;background:{{ v.swatch }};box-shadow:inset 0 0 0 1px rgba(0,0,0,0.12)"></span>
+                </button>
+              </sc-for>
+            </div>
+            <a href="{{ c.wa }}" target="_blank" style="display:inline-flex;align-items:center;height:44px;padding:0 18px;background:#231f20;color:#fff;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;white-space:nowrap" style-hover="background:#7f2d2d;color:#fff">Enquire →</a>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="Magal Six Ways" theme="light" whatsapp="{{ waNum }}" hint-size="100%,760px"></dc-import>
+
+<section id="straps" data-screen-label="Straps" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));border-bottom:1px solid #e2e2e2">
+  <div style="padding:clamp(32px,4.5vw,56px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;gap:20px;border-right:1px solid #e2e2e2">
+    <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#7f2d2d">05 — Straps</span>
+    <h2 data-reveal="up" style="margin:0;font-weight:200;font-size:clamp(36px,4.4vw,56px);line-height:1">Changes in seconds.</h2>
+    <span data-reveal="up" style="font-size:15px;line-height:26px;color:#474747;max-width:40ch">Micro-grooved FKM rubber for every day. Crocodile and Louisiana lizard for the evening.</span>
+  </div>
+  <div style="padding:clamp(16px,2.5vw,32px);display:flex;align-items:center;overflow:hidden"><img loading="lazy" decoding="async" data-reveal="up" src="img585.webp" alt="MAGAL rubber, crocodile and lizard straps" style="width:100%;height:auto"></div>
+</section>
+
+<section data-screen-label="Contact" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));font-size:11px;letter-spacing:0.24em;text-transform:uppercase">
+  <div style="padding:clamp(32px,4.5vw,56px) clamp(16px,2.5vw,32px);display:flex;flex-direction:column;gap:16px">
+    <span style="color:#7f2d2d">06 — Contact</span>
+    <span style="font-size:clamp(34px,3.8vw,48px);font-weight:200;letter-spacing:0;text-transform:none;line-height:1">Unmistakably yours.</span>
+  </div>
+  <a href="{{ waLink }}" target="_blank" style="padding:clamp(32px,4.5vw,56px) clamp(16px,2.5vw,32px);background:#7f2d2d;color:#fff;display:flex;align-items:end;min-height:120px" style-hover="background:#5c1f1f;color:#fff">WhatsApp →</a>
+  <a href="{{ igLink }}" target="_blank" style="padding:clamp(32px,4.5vw,56px) clamp(16px,2.5vw,32px);background:#231f20;color:#fff;display:flex;align-items:end;min-height:120px" style-hover="background:#000;color:#fff">Instagram →</a>
+</section>
+<footer style="border-top:1px solid #231f20;padding:20px clamp(16px,2.5vw,32px);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#6b6b6b"><span style="color:#231f20;letter-spacing:0.5em">MAGAL</span><span>Tempus omnia revelat</span><span>© 2026 MAGAL</span></footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;instagram&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;magal&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { pick: [0, 0, 0], narrow: typeof innerWidth !== 'undefined' && innerWidth < 820 };
+  rootRef = React.createRef();
+  onResize = () => { const n = innerWidth < 820; if (n !== this.state.narrow) this.setState({ narrow: n }); };
+
+  componentDidMount() {
+    addEventListener('resize', this.onResize);
+    this.onLang = () => this.forceUpdate(); addEventListener('magal-lang', this.onLang);
+    const root = this.rootRef.current; if (!root) return;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const intro = root.querySelector('[data-intro]');
+    if (reduce || window.parent !== window || sessionStorage.getItem('magal-intro-mix')) intro.style.display = 'none';
+    else {
+      root.querySelectorAll('[data-intro-l]').forEach((l, i) => l.animate([{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'none' }], { duration: 700, delay: 120 + i * 90, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' }));
+      const out = intro.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-100%)' }], { duration: 700, delay: 700, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' });
+      out.onfinish = () => { intro.style.display = 'none'; sessionStorage.setItem('magal-intro-mix', '1'); };
+    }
+    const q = s => root.querySelector(s), qa = s => [...root.querySelectorAll(s)];
+    if (reduce) { qa('[data-w]').forEach(w => w.style.opacity = 1); qa('[data-step]').forEach((s, i) => s.style.opacity = i ? 0 : 1); return; }
+    const anims = new Map();
+    qa('[data-reveal]').forEach(el => { const a = el.animate([{ opacity: 0, transform: 'translateY(28px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' }); a.pause(); anims.set(el, a); });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const sib = [...e.target.parentElement.children].filter(c => anims.has(c));
+      setTimeout(() => anims.get(e.target).play(), (intro.style.display === 'none' ? 0 : 900) + Math.max(0, sib.indexOf(e.target)) * 100);
+      this.io.unobserve(e.target);
+    }), { threshold: 0.12 });
+    anims.forEach((_, el) => this.io.observe(el));
+    const heroImg = q('[data-hero-img]'), heroWord = q('[data-hero-word]'), man = q('[data-manifesto]'), show = q('[data-show]'), watch = q('[data-show-watch]'), ring = q('[data-show-ring]'), counter = q('[data-counter]');
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const H = innerHeight, y = scrollY;
+      const hp = clamp(y / H, 0, 1);
+      heroImg.style.transform = `translate(-50%,-50%) scale(${1 + hp * 0.35})`;
+      heroImg.style.opacity = 1 - hp * 0.8;
+      heroWord.style.transform = `translateY(-50%) translateX(${-hp * 12}vw)`;
+      const words = qa('[data-w]'), mr = man.getBoundingClientRect();
+      const mp = clamp((H * 0.85 - mr.top) / (mr.height * 0.8), 0, 1);
+      words.forEach((w, i) => { w.style.opacity = clamp(mp * words.length * 1.15 - i, 0.14, 1); });
+      const sr = show.getBoundingClientRect();
+      const sp = clamp(-sr.top / (sr.height - H), 0, 1);
+      watch.style.transform = `rotate(${-10 + sp * 20}deg) scale(${0.88 + Math.sin(sp * Math.PI) * 0.12})`;
+      ring.style.transform = `rotate(${sp * 120}deg)`;
+      const steps = qa('[data-step]'), marks = qa('[data-mark]');
+      const idx = Math.min(steps.length - 1, Math.floor(sp * steps.length));
+      counter.textContent = String(idx + 1).padStart(2, '0');
+      steps.forEach((s, i) => { s.style.opacity = i === idx ? 1 : 0; s.style.transform = `translateY(${(i - idx) * 20}px)`; s.style.transition = 'opacity 0.5s, transform 0.6s'; });
+      marks.forEach((m, i) => { m.style.opacity = i === idx ? 1 : 0.25; });
+      qa('[data-parallax-img]').forEach(el => { const r = el.parentElement.getBoundingClientRect(); el.style.transform = `translateY(${((r.top + r.height / 2 - H / 2) / H) * 100 * +el.dataset.parallaxImg}%)`; });
+    };
+    this.onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll);
+    update();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('resize', this.onResize);
+    removeEventListener('magal-lang', this.onLang);
+    this.io && this.io.disconnect();
+    if (this.onScroll) { removeEventListener('scroll', this.onScroll); removeEventListener('resize', this.onScroll); }
+  }
+
+  wa(msg) { return 'https://wa.me/' + String(this.props.whatsapp ?? '').replace(/\D/g, '') + '?text=' + encodeURIComponent(msg); }
+
+  renderVals() {
+    const T = window.magalT || (s => s);
+    const ig = String(this.props.instagram ?? 'magal').replace(/^@/, '');
+    const nw = this.state.narrow;
+    const data = [
+      { num: '01', name: 'Puella, Surge', motto: 'Rise up, girls!', size: '36 mm', imgH: '140%',
+        specs: [['Case', '36 mm octagonal'], ['Movement', 'Automatic skeleton'], ['Strap', 'Integrated FKM rubber']],
+        variants: [['Black', '#24262b', 'img373.webp'], ['Red', '#c8202a', 'img434.webp'], ['Blue', '#1f3fbf', 'img445.webp'], ['Green', '#1d7a3e', 'img451.webp'], ['Crystal bezel', '#9a9ca3', 'img454.webp']] },
+      { num: '02', name: 'Omnia Munda', motto: 'All is pure, for the purest', size: '42 mm', imgH: '120%',
+        specs: [['Case', '42 mm octagonal'], ['Movement', 'Automatic, open-worked back'], ['Strap', 'FKM rubber, crocodile or lizard']],
+        variants: [['Black', '#22242a', 'img543.webp'], ['Navy', '#1d2b52', 'img487.webp'], ['Green', '#2e8a55', 'img490.webp'], ['Red', '#cc2229', 'img493.webp'], ['White', '#f1f1ef', 'img519.webp']] },
+      { num: '03', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', size: '42 mm', imgH: '112%',
+        specs: [['Case', '42 mm octagonal'], ['Movement', 'Automatic, open-worked back'], ['Dial', 'Deep red']],
+        variants: [['Red dial', '#b81d24', 'img566.webp']] }
+    ];
+    const collections = data.map((c, ci) => {
+      const sel = this.state.pick[ci];
+      return {
+        ...c, activeName: c.variants[sel][0],
+        specs: c.specs.map(([k, v]) => ({ k, v })),
+        wa: this.wa(`Hello MAGAL, I'm interested in ${c.name} (${c.variants[sel][0]}).`),
+        variants: c.variants.map(([name, swatch, f], vi) => ({
+          name, swatch, src: '' + f, alt: `${c.name} — ${name}`,
+          opacity: vi === sel ? 1 : 0,
+          transform: vi === sel ? 'none' : (vi < sel ? 'translateX(-40px) rotate(-5deg) scale(0.96)' : 'translateX(40px) rotate(5deg) scale(0.96)'),
+          ring: vi === sel ? '#231f20' : '#e2e2e2',
+          pick: () => this.setState(s => { const p = [...s.pick]; p[ci] = vi; return { pick: p }; })
+        }))
+      };
+    });
+    return {
+      rootRef: this.rootRef,
+      waNum: this.props.whatsapp ?? '',
+      waLink: this.wa('Hello MAGAL, I would like to know more about your watches.'),
+      igLink: 'https://instagram.com/' + ig,
+      navLinks: nw ? 'none' : 'flex',
+      showCols: nw ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,2fr) minmax(0,1fr)',
+      abs: nw ? 'absolute' : 'static',
+      calloutBg: nw ? 'rgba(255,255,255,0.94)' : 'transparent',
+      calloutH: nw ? '170px' : '100%',
+      watchH: nw ? '90%' : '140%',
+      heroSpecs: [{ k: 'Case', v: '36 / 42 mm octagonal' }, { k: 'Crystal', v: 'Sapphire, UV anti-glare' }, { k: 'Movement', v: 'Automatic skeleton' }, { k: 'Back', v: 'Open-worked' }],
+      words: T('Born from family, curiosity and a passion for watchmaking. Every element conceived by hand — an octagon, a movement on show, a strap that changes in seconds. Not simply different. Unmistakably its own.').split(' '),
+      founders: [{ k: 'MA', v: 'Massimiliano' }, { k: 'GA', v: 'Gabriele' }, { k: 'L', v: 'Alessandro' }],
+      anatomy: [
+        { tag: 'A · Octagon case', x: '12%', y: '22%', k: 'The case', t: 'A signature octagon', d: 'Drawn by Massimiliano Wax. 36 mm for Puella, Surge; 42 mm for Omnia Munda and Fecit Potentiam.' },
+        { tag: 'B · Sapphire', x: '62%', y: '44%', k: 'The crystal', t: 'Sapphire, UV anti-glare', d: 'Scratch-resistant clarity over a dial that reads in any light.' },
+        { tag: 'C · FKM strap', x: '14%', y: '74%', k: 'The movement', t: 'Certified, open-worked', d: 'An automatic mechanical heart, left visible through the case back.' }
+      ],
+      collections
+    };
+  }
+}
+</script>
+</body>
+</html>

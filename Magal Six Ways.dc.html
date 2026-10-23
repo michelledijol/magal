@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
+</helmet>
+<section data-screen-label="Fecit Potentiam straps" style="background:{{ bg }};color:{{ fg }};font-family:'Nunito Sans','Avenir LT Pro',Avenir,sans-serif;border-top:1px solid {{ line }};border-bottom:1px solid {{ line }}">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(72px,10vh,120px) clamp(20px,4vw,56px);display:flex;flex-direction:column;gap:clamp(32px,5vh,56px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:{{ accent }}">“For the purists, only the purest”</span>
+      <h2 style="margin:0;font-weight:200;font-size:clamp(40px,5.6vw,80px);line-height:0.95;letter-spacing:0.08em;text-transform:uppercase">Fecit Potentiam</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));border-top:1px solid {{ fg }}">
+      <sc-for list="{{ items }}" as="it" hint-placeholder-count="2">
+        <a href="{{ it.wa }}" target="_blank" style="display:flex;flex-direction:column;gap:20px;padding:28px clamp(12px,2vw,24px) 24px;border-right:1px solid {{ line }};border-bottom:1px solid {{ line }};color:{{ fg }};text-decoration:none;transition:background 0.3s" style-hover="background:{{ hover }};color:{{ fg }}">
+          <img loading="lazy" decoding="async" src="{{ it.src }}" alt="Fecit Potentiam — {{ it.label }}" style="width:100%;max-width:551px;height:auto;margin:0 auto;display:block">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase">{{ it.label }}</span>
+            <span style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:{{ muted }}">Enquire →</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:640},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;,&quot;tsType&quot;:&quot;'dark'|'light'&quot;},&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const dark = (this.props.theme ?? 'dark') === 'dark';
+    const n = String(this.props.whatsapp ?? '').replace(/\D/g, '');
+    const items = [['Crocodile', 'img284.webp'], ['Louisiana Lizard', 'img285.webp']].map(([label, src]) => ({
+      label, src,
+      wa: 'https://wa.me/' + n + '?text=' + encodeURIComponent(`Hello MAGAL, I'm interested in Fecit Potentiam — ${label}.`)
+    }));
+    return {
+      items,
+      bg: dark ? '#231f20' : '#fff', fg: dark ? '#fff' : '#231f20',
+      muted: dark ? '#b5b0b1' : '#6b6b6b', line: dark ? '#3b3536' : '#e2e2e2',
+      hover: dark ? '#2e292a' : '#f6f6f6', accent: dark ? '#c46a6a' : '#7f2d2d'
+    };
+  }
+}
+</script>
+</body>
+</html>

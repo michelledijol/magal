@@ -9,78 +9,81 @@
 <x-dc>
 <helmet>
 <title>MAGAL — Noir</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&display=swap">
 <link rel="stylesheet" href="styles.css">
 <script src="_ds_bundle.js"></script>
+<script src="magal-i18n.js"></script>
 <style>
-body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;text-wrap:pretty}
-a{color:#7f2d2d;text-underline-offset:3px}
-a:hover{color:#5c1f1f}
+body{margin:0;background:#231f20;-webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:hover{color:#c46a6a}
 </style>
 </helmet>
-<div data-screen-label="1b Noir" style="width:100%;background:#231f20;color:#fff;font-family:'Nunito Sans',sans-serif">
-    <div style="position:relative;height:820px;overflow:hidden">
-      <img src="img376.jpg" alt="MAGAL en su estuche rojo" style="position:absolute;right:0;top:0;width:62%;height:100%;object-fit:cover">
-      <div style="position:absolute;inset:0;background:linear-gradient(90deg,#231f20 38%,rgba(35,31,32,0) 75%)"></div>
-      <nav style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:32px 56px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase">
-        <span style="font-size:18px;font-weight:300;letter-spacing:0.62em">MAGAL</span>
-        <div style="display:flex;gap:36px;align-items:center"><span>Collection</span><span>Craft</span><span>Straps</span><span style="border:1px solid #fff;padding:10px 18px">Enquire</span></div>
-      </nav>
-      <div style="position:absolute;left:56px;bottom:72px;display:flex;flex-direction:column;gap:24px">
-        <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.7)">Mechanical · Automatic · Octagonal</span>
-        <h1 style="margin:0;font-weight:200;font-size:150px;line-height:0.86;letter-spacing:-0.01em">Time<br>reveals<br><span style="color:#c46a6a">everything.</span></h1>
-      </div>
-      <span style="position:absolute;right:56px;bottom:72px;font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.7)">01 / 05 — Scroll</span>
+<div data-screen-label="Noir" style="width:100%;background:#231f20;color:#fff;font-family:'Nunito Sans',sans-serif;overflow-x:hidden">
+  <div style="position:relative;height:min(100svh,880px);min-height:560px;overflow:hidden">
+    <img src="img376.webp" alt="MAGAL en su estuche rojo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center" decoding="async" fetchpriority="high">
+    <div style="position:absolute;inset:0;background:linear-gradient(0deg,#231f20 8%,rgba(35,31,32,0.55) 45%,rgba(35,31,32,0) 75%),linear-gradient(90deg,rgba(35,31,32,0.85) 0%,rgba(35,31,32,0) 60%)"></div>
+    <nav style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:clamp(18px,3vw,32px) clamp(20px,4vw,56px);font-size:11px;letter-spacing:0.28em;text-transform:uppercase">
+      <span style="font-size:clamp(15px,1.6vw,18px);font-weight:300;letter-spacing:0.5em">MAGAL</span>
+      <a href="{{ wa }}" target="_blank" style="border:1px solid #fff;padding:12px 18px;color:#fff" style-hover="background:#fff;color:#231f20">Enquire</a>
+    </nav>
+    <div style="position:absolute;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(40px,8vh,72px);display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.8)">Mechanical · Automatic · Octagonal</span>
+      <h1 style="margin:0;font-weight:200;font-size:clamp(56px,11vw,150px);line-height:0.88;letter-spacing:-0.01em">Time<br>reveals<br><span style="color:#c46a6a">everything.</span></h1>
     </div>
-    <div style="padding:140px 56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:56px;border-top:1px solid #3b3536">
-      <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:#c46a6a">The house</span>
-      <p style="margin:0;font-weight:200;font-size:46px;line-height:1.2">Born from family, curiosity and a passion for watchmaking. <span style="color:#8a8384">Every element conceived by hand — an octagon, a movement on show, a strap that changes in seconds.</span></p>
-    </div>
-    <dc-import name="Magal Six Ways" theme="dark" whatsapp="{{ waNum }}" hint-size="100%,760px"></dc-import>
-    <div style="padding:120px 56px 40px;display:flex;justify-content:space-between;align-items:end;border-top:1px solid #3b3536">
-      <h2 style="margin:0;font-weight:200;font-size:112px;line-height:0.9">Three<br>watches.</h2>
-      <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.7)">One octagon</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#3b3536;border-top:1px solid #3b3536;border-bottom:1px solid #3b3536">
-      <sc-for list="{{ models }}" as="m" hint-placeholder-count="3">
-        <div style="background:#231f20;padding:32px;display:flex;flex-direction:column;gap:12px">
-          <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#9b9596">{{ m.num }} — {{ m.size }}</span>
-          <div style="height:440px;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="{{ m.img }}" alt="{{ m.name }}" style="height:115%;width:auto"></div>
-          <span style="font-size:28px;font-weight:200;letter-spacing:0.1em;text-transform:uppercase">{{ m.name }}</span>
-          <span style="font-size:15px;color:#b5b0b1">{{ m.motto }}</span>
-          <div style="display:flex;gap:8px;margin-top:12px"><sc-for list="{{ m.sw }}" as="s" hint-placeholder-count="4"><span style="width:16px;height:16px;border-radius:50%;background:{{ s }};box-shadow:0 0 0 1px rgba(255,255,255,0.25)"></span></sc-for></div>
-        </div>
-      </sc-for>
-    </div>
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch">
-      <img src="img392.jpg" alt="Fondo abierto" style="width:100%;height:600px;object-fit:cover;display:block">
-      <div style="padding:72px 56px;display:flex;flex-direction:column;justify-content:space-between;background:#7f2d2d">
-        <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase">Open-worked case back</span>
-        <h2 style="margin:0;font-weight:200;font-size:76px;line-height:0.98">The heart,<br>always<br>in sight.</h2>
-        <span style="font-size:15px;line-height:26px;max-width:36ch">Certified automatic movement · sapphire, UV anti-glare · 36 / 42 mm octagonal case.</span>
-      </div>
-    </div>
-    <div style="padding:160px 56px 120px;display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center">
-      <h2 style="margin:0;font-weight:200;font-size:132px;line-height:0.9">Unmistakably<br>yours.</h2>
-      <div style="display:flex;gap:12px"><span style="background:#fff;color:#231f20;padding:20px 36px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase">WhatsApp</span><span style="border:1px solid #fff;padding:20px 36px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase">Instagram</span></div>
-    </div>
-    <div style="border-top:1px solid #3b3536;padding:24px 56px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b9596"><span>MAGAL</span><span>Tempus omnia revelat</span><span>© 2026</span></div>
   </div>
+  <div style="padding:clamp(72px,11vw,140px) clamp(20px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px 56px;border-top:1px solid #3b3536">
+    <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:#c46a6a">The house</span>
+    <p style="margin:0;font-weight:200;font-size:clamp(26px,3.6vw,46px);line-height:1.2;grid-column:span 2;min-width:0;max-width:30ch">Born from family, curiosity and a passion for watchmaking. <span style="color:#a39d9e">Every element conceived by hand — an octagon, a movement on show, a strap that changes in seconds.</span></p>
+  </div>
+  <dc-import name="Magal Six Ways" theme="dark" whatsapp="{{ waNum }}" hint-size="100%,760px"></dc-import>
+  <div style="padding:clamp(72px,10vw,120px) clamp(20px,4vw,56px) 32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px">
+    <h2 style="margin:0;font-weight:200;font-size:clamp(48px,8.5vw,112px);line-height:0.9">Three<br>watches.</h2>
+    <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.75)">One octagon</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:#3b3536;border-top:1px solid #3b3536;border-bottom:1px solid #3b3536">
+    <sc-for list="{{ models }}" as="m" hint-placeholder-count="3">
+      <div style="background:#231f20;padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:#a39d9e">{{ m.num }} — {{ m.size }}</span>
+        <div style="height:clamp(300px,34vw,440px);display:flex;align-items:center;justify-content:center;overflow:hidden"><img loading="lazy" decoding="async" src="{{ m.img }}" alt="{{ m.name }}" style="height:110%;width:auto;max-width:none"></div>
+        <span style="font-size:clamp(22px,2.2vw,28px);font-weight:200;letter-spacing:0.1em;text-transform:uppercase">{{ m.name }}</span>
+        <span style="font-size:15px;color:#b5b0b1">{{ m.motto }}</span>
+        <div style="display:flex;gap:8px;margin-top:8px"><sc-for list="{{ m.sw }}" as="s" hint-placeholder-count="4"><span style="width:16px;height:16px;border-radius:50%;background:{{ s }};box-shadow:0 0 0 1px rgba(255,255,255,0.25)"></span></sc-for></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+    <img loading="lazy" decoding="async" src="img392.webp" alt="Fondo abierto" style="width:100%;height:clamp(320px,46vw,600px);object-fit:cover;display:block">
+    <div style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:32px;background:#7f2d2d">
+      <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase">Open-worked case back</span>
+      <h2 style="margin:0;font-weight:200;font-size:clamp(44px,6vw,76px);line-height:0.98">The heart,<br>always<br>in sight.</h2>
+      <span style="font-size:15px;line-height:26px;max-width:36ch">Certified automatic movement · sapphire, UV anti-glare · 36 / 42 mm octagonal case.</span>
+    </div>
+  </div>
+  <div style="padding:clamp(96px,13vw,160px) clamp(20px,4vw,56px) clamp(72px,10vw,120px);display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center">
+    <h2 style="margin:0;font-weight:200;font-size:clamp(44px,10vw,132px);line-height:0.92">Unmistakably<br>yours.</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+      <a href="{{ wa }}" target="_blank" style="background:#fff;color:#231f20;padding:20px 36px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase" style-hover="background:#c46a6a;color:#fff">WhatsApp</a>
+      <a href="{{ ig }}" target="_blank" style="border:1px solid #fff;color:#fff;padding:20px 36px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase" style-hover="background:#fff;color:#231f20">Instagram</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #3b3536;padding:24px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#a39d9e"><span>MAGAL</span><span>Tempus omnia revelat</span><span>© 2026</span></div>
+</div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;instagram&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;magal&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
+    const n = String(this.props.whatsapp ?? '').replace(/\D/g, '');
+    const ig = String(this.props.instagram ?? 'magal').replace(/^@/, '');
     return {
+      waNum: n,
+      wa: 'https://wa.me/' + n + '?text=' + encodeURIComponent('Hello MAGAL, I would like to know more about your watches.'),
+      ig: 'https://instagram.com/' + ig,
       models: [
-        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'img373.png', colors: '5 colori', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
-        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'img487.png', colors: '5 colori', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
-        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'img566.png', colors: 'Quadrante rosso', sw: ['#b81d24'] }
-      ],
-      specs: [{ k: 'Case', v: '36 mm octagonal' }, { k: 'Crystal', v: 'Sapphire, UV anti-glare' }, { k: 'Movement', v: 'Automatic skeleton' }, { k: 'Back', v: 'Open-worked' }, { k: 'Strap', v: 'Integrated FKM rubber' }],
-      grid: [
-        ['Black', '#24262b', 'img373.png', 'Puella, Surge'], ['Red', '#c8202a', 'img434.png', 'Puella, Surge'], ['Blue', '#1f3fbf', 'img445.png', 'Puella, Surge'], ['Green', '#1d7a3e', 'img451.png', 'Puella, Surge'], ['Crystal', '#9a9ca3', 'img454.png', 'Puella, Surge'],
-        ['Black', '#22242a', 'img543.png', 'Omnia Munda'], ['Navy', '#1d2b52', 'img487.png', 'Omnia Munda'], ['Green', '#2e8a55', 'img490.png', 'Omnia Munda'], ['Red', '#cc2229', 'img493.png', 'Omnia Munda'], ['White', '#f1f1ef', 'img519.png', 'Omnia Munda']
-      ].map(([name, sw, f, ref]) => ({ name, sw, img: '' + f, ref }))
+        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'img373.webp', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
+        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'img487.webp', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
+        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'img566.webp', sw: ['#b81d24'] }
+      ]
     };
   }
 }
