@@ -10,8 +10,8 @@
 <helmet>
 <title>MAGAL — Noir</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital@0;1&display=swap">
-<link rel="stylesheet" href="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/styles.css">
-<script src="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/_ds_bundle.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
 <style>
 body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;text-wrap:pretty}
 a{color:#7f2d2d;text-underline-offset:3px}
@@ -20,7 +20,7 @@ a:hover{color:#5c1f1f}
 </helmet>
 <div data-screen-label="1b Noir" style="width:100%;background:#231f20;color:#fff;font-family:'Nunito Sans',sans-serif">
     <div style="position:relative;height:820px;overflow:hidden">
-      <img src="catalog/img376.jpg" alt="MAGAL en su estuche rojo" style="position:absolute;right:0;top:0;width:62%;height:100%;object-fit:cover">
+      <img src="img376.jpg" alt="MAGAL en su estuche rojo" style="position:absolute;right:0;top:0;width:62%;height:100%;object-fit:cover">
       <div style="position:absolute;inset:0;background:linear-gradient(90deg,#231f20 38%,rgba(35,31,32,0) 75%)"></div>
       <nav style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:32px 56px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase">
         <span style="font-size:18px;font-weight:300;letter-spacing:0.62em">MAGAL</span>
@@ -53,7 +53,7 @@ a:hover{color:#5c1f1f}
       </sc-for>
     </div>
     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch">
-      <img src="catalog/img392.jpg" alt="Fondo abierto" style="width:100%;height:600px;object-fit:cover;display:block">
+      <img src="img392.jpg" alt="Fondo abierto" style="width:100%;height:600px;object-fit:cover;display:block">
       <div style="padding:72px 56px;display:flex;flex-direction:column;justify-content:space-between;background:#7f2d2d">
         <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase">Open-worked case back</span>
         <h2 style="margin:0;font-weight:200;font-size:76px;line-height:0.98">The heart,<br>always<br>in sight.</h2>
@@ -72,15 +72,15 @@ class Component extends DCLogic {
   renderVals() {
     return {
       models: [
-        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'catalog/img373.png', colors: '5 colori', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
-        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'catalog/img487.png', colors: '5 colori', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
-        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'catalog/img566.png', colors: 'Quadrante rosso', sw: ['#b81d24'] }
+        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'img373.png', colors: '5 colori', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
+        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'img487.png', colors: '5 colori', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
+        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'img566.png', colors: 'Quadrante rosso', sw: ['#b81d24'] }
       ],
       specs: [{ k: 'Case', v: '36 mm octagonal' }, { k: 'Crystal', v: 'Sapphire, UV anti-glare' }, { k: 'Movement', v: 'Automatic skeleton' }, { k: 'Back', v: 'Open-worked' }, { k: 'Strap', v: 'Integrated FKM rubber' }],
       grid: [
         ['Black', '#24262b', 'img373.png', 'Puella, Surge'], ['Red', '#c8202a', 'img434.png', 'Puella, Surge'], ['Blue', '#1f3fbf', 'img445.png', 'Puella, Surge'], ['Green', '#1d7a3e', 'img451.png', 'Puella, Surge'], ['Crystal', '#9a9ca3', 'img454.png', 'Puella, Surge'],
         ['Black', '#22242a', 'img543.png', 'Omnia Munda'], ['Navy', '#1d2b52', 'img487.png', 'Omnia Munda'], ['Green', '#2e8a55', 'img490.png', 'Omnia Munda'], ['Red', '#cc2229', 'img493.png', 'Omnia Munda'], ['White', '#f1f1ef', 'img519.png', 'Omnia Munda']
-      ].map(([name, sw, f, ref]) => ({ name, sw, img: 'catalog/' + f, ref }))
+      ].map(([name, sw, f, ref]) => ({ name, sw, img: '' + f, ref }))
     };
   }
 }

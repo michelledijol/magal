@@ -10,8 +10,8 @@
 <helmet>
 <title>MAGAL — Atelier</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital@0;1&display=swap">
-<link rel="stylesheet" href="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/styles.css">
-<script src="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/_ds_bundle.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
 <style>
 body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;text-wrap:pretty}
 a{color:#7f2d2d;text-underline-offset:3px}
@@ -31,7 +31,7 @@ a:hover{color:#5c1f1f}
         <div style="display:flex;flex-direction:column;gap:16px"><h1 style="margin:0;font-weight:200;font-size:72px;line-height:0.95">Puella,<br>Surge</h1><span style="font-size:15px;color:#6b6b6b">Rise up, girls! — 36 mm automatic skeleton.</span></div>
       </div>
       <div style="position:relative;background:#f1f1f1;display:flex;align-items:center;justify-content:center;overflow:hidden">
-        <img src="catalog/img373.png" alt="Puella, Surge" style="height:130%;width:auto">
+        <img src="img373.png" alt="Puella, Surge" style="height:130%;width:auto">
         <div style="position:absolute;left:24px;top:200px;display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"><span>A · Octagon case</span><span style="width:90px;height:1px;background:#231f20"></span></div>
         <div style="position:absolute;right:24px;top:360px;display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"><span style="width:90px;height:1px;background:#231f20"></span><span>B · Sapphire</span></div>
         <div style="position:absolute;left:24px;bottom:200px;display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase"><span>C · FKM strap</span><span style="width:90px;height:1px;background:#231f20"></span></div>
@@ -63,7 +63,7 @@ a:hover{color:#5c1f1f}
         <h2 style="margin:0;font-weight:200;font-size:56px;line-height:1">Changes in seconds.</h2>
         <span style="font-size:15px;line-height:26px;color:#474747;max-width:40ch">Micro-grooved FKM rubber for every day. Crocodile and Louisiana lizard for the evening.</span>
       </div>
-      <div style="padding:32px;display:flex;align-items:center"><img src="catalog/img585.png" alt="Correas MAGAL" style="width:100%"></div>
+      <div style="padding:32px;display:flex;align-items:center"><img src="img585.png" alt="Correas MAGAL" style="width:100%"></div>
     </div>
     <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);font-size:11px;letter-spacing:0.24em;text-transform:uppercase">
       <span style="padding:56px 32px;font-size:48px;font-weight:200;letter-spacing:0;text-transform:none;line-height:1">Unmistakably yours.</span>
@@ -77,15 +77,15 @@ class Component extends DCLogic {
   renderVals() {
     return {
       models: [
-        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'catalog/img373.png', colors: '5 colori', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
-        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'catalog/img487.png', colors: '5 colori', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
-        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'catalog/img566.png', colors: 'Quadrante rosso', sw: ['#b81d24'] }
+        { num: '01', size: '36 mm', name: 'Puella, Surge', motto: 'Rise up, girls!', img: 'img373.png', colors: '5 colori', sw: ['#24262b', '#c8202a', '#1f3fbf', '#1d7a3e', '#9a9ca3'] },
+        { num: '02', size: '42 mm', name: 'Omnia Munda', motto: 'All is pure, for the purest', img: 'img487.png', colors: '5 colori', sw: ['#22242a', '#1d2b52', '#2e8a55', '#cc2229', '#f1f1ef'] },
+        { num: '03', size: '42 mm', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', img: 'img566.png', colors: 'Quadrante rosso', sw: ['#b81d24'] }
       ],
       specs: [{ k: 'Case', v: '36 mm octagonal' }, { k: 'Crystal', v: 'Sapphire, UV anti-glare' }, { k: 'Movement', v: 'Automatic skeleton' }, { k: 'Back', v: 'Open-worked' }, { k: 'Strap', v: 'Integrated FKM rubber' }],
       grid: [
         ['Black', '#24262b', 'img373.png', 'Puella, Surge'], ['Red', '#c8202a', 'img434.png', 'Puella, Surge'], ['Blue', '#1f3fbf', 'img445.png', 'Puella, Surge'], ['Green', '#1d7a3e', 'img451.png', 'Puella, Surge'], ['Crystal', '#9a9ca3', 'img454.png', 'Puella, Surge'],
         ['Black', '#22242a', 'img543.png', 'Omnia Munda'], ['Navy', '#1d2b52', 'img487.png', 'Omnia Munda'], ['Green', '#2e8a55', 'img490.png', 'Omnia Munda'], ['Red', '#cc2229', 'img493.png', 'Omnia Munda'], ['White', '#f1f1ef', 'img519.png', 'Omnia Munda']
-      ].map(([name, sw, f, ref]) => ({ name, sw, img: 'catalog/' + f, ref }))
+      ].map(([name, sw, f, ref]) => ({ name, sw, img: '' + f, ref }))
     };
   }
 }

@@ -11,8 +11,8 @@
 <title>MAGAL — Tempus omnia revelat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&display=swap">
-<link rel="stylesheet" href="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/styles.css">
-<script src="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/_ds_bundle.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:'Nunito Sans','Avenir LT Pro',Avenir,sans-serif;background:#0d0c0c;color:#231f20;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-wrap:pretty}
@@ -44,7 +44,7 @@ a:hover{color:#5c1f1f}
 <section id="top" data-screen-label="Hero" style="position:relative;height:100vh;min-height:640px;background:#0d0c0c;color:#fff;overflow:hidden">
   <div data-hero-word="1" style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-weight:200;font-size:23vw;line-height:1;letter-spacing:0.06em;color:rgba(255,255,255,0.07);white-space:nowrap;pointer-events:none;user-select:none">MAGAL</div>
   <div data-hero-img="1" style="position:absolute;left:50%;top:50%;width:min(44vh,82vw);aspect-ratio:773/1160;transform:translate(-50%,-50%);-webkit-mask-image:radial-gradient(ellipse 60% 62% at 50% 48%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 62% at 50% 48%,#000 55%,transparent 100%)">
-    <img src="catalog/img376.jpg" alt="MAGAL watch presented in its red case" style="width:100%;height:100%;object-fit:cover;display:block">
+    <img src="img376.jpg" alt="MAGAL watch presented in its red case" style="width:100%;height:100%;object-fit:cover;display:block">
   </div>
   <div style="position:absolute;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(28px,5vh,56px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap">
     <div>
@@ -88,7 +88,7 @@ a:hover{color:#5c1f1f}
     <div style="position:relative;height:100%;display:flex;align-items:center;justify-content:center">
       <div style="position:absolute;width:min(46vw,64vh);aspect-ratio:1;border:1px solid #d6d6d6;border-radius:50%"></div>
       <div data-show-ring="1" style="position:absolute;width:min(52vw,72vh);aspect-ratio:1;border:1px dashed #cfcfcf;border-radius:50%"></div>
-      <img data-show-watch="1" src="catalog/img373.png" alt="MAGAL Puella, Surge skeleton" style="height:{{ watchH }};width:auto;max-width:none;position:relative;pointer-events:none">
+      <img data-show-watch="1" src="img373.png" alt="MAGAL Puella, Surge skeleton" style="height:{{ watchH }};width:auto;max-width:none;position:relative;pointer-events:none">
     </div>
     <div style="position:{{ abs }};left:20px;right:20px;bottom:32px;z-index:2"><div style="position:relative;height:{{ calloutH }}">
       <sc-for list="{{ anatomy }}" as="a" hint-placeholder-count="3">
@@ -103,7 +103,7 @@ a:hover{color:#5c1f1f}
 </section>
 
 <section data-screen-label="Movement" style="position:relative;height:clamp(520px,90vh,900px);overflow:hidden;background:#0d0c0c">
-  <img data-parallax-img="0.18" src="catalog/img392.jpg" alt="Open-worked case back revealing the movement" style="position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;display:block">
+  <img data-parallax-img="0.18" src="img392.jpg" alt="Open-worked case back revealing the movement" style="position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;display:block">
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,12,12,0.78),rgba(13,12,12,0.1) 60%)"></div>
   <div style="position:absolute;left:clamp(20px,4vw,56px);bottom:clamp(40px,8vh,96px);max-width:560px;color:#fff">
     <p data-reveal="up" style="margin:0;font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:rgba(255,255,255,0.75)">Open-worked case back</p>
@@ -164,7 +164,7 @@ a:hover{color:#5c1f1f}
       <p data-reveal="up" style="margin:28px 0 0;font-size:15px;line-height:27px;max-width:40ch;color:rgba(255,255,255,0.75)">Micro-grooved FKM rubber for every day. Crocodile and Louisiana lizard for the evening. The strap changes in seconds.</p>
     </div>
     <figure data-reveal="up" style="margin:0">
-      <img src="catalog/img585.png" alt="MAGAL rubber, crocodile and lizard straps" style="width:100%;display:block">
+      <img src="img585.png" alt="MAGAL rubber, crocodile and lizard straps" style="width:100%;display:block">
     </figure>
   </div>
 </section>
@@ -280,15 +280,15 @@ class Component extends DCLogic {
       { num: '01', name: 'Puella, Surge', motto: 'Rise up, girls!', size: '36 mm', imgH: '150%',
         body: 'An automatic skeleton timepiece with a clean bezel or brilliant crystal-set accents. A refined blend of craftsmanship, precision and contemporary design.',
         specs: [['Case', '36 mm octagonal'], ['Crystal', 'Sapphire, UV anti-glare'], ['Movement', 'Automatic skeleton, manual-wind'], ['Strap', 'Integrated FKM rubber, micro-grooved']],
-        variants: [['Black', '#24262b', 'catalog/img373.png'], ['Red', '#c8202a', 'catalog/img434.png'], ['Blue', '#1f3fbf', 'catalog/img445.png'], ['Green', '#1d7a3e', 'catalog/img451.png'], ['Crystal bezel', '#9a9ca3', 'catalog/img454.png']] },
+        variants: [['Black', '#24262b', 'img373.png'], ['Red', '#c8202a', 'img434.png'], ['Blue', '#1f3fbf', 'img445.png'], ['Green', '#1d7a3e', 'img451.png'], ['Crystal bezel', '#9a9ca3', 'img454.png']] },
       { num: '02', name: 'Omnia Munda', motto: 'All is pure, for the purest', size: '42 mm', imgH: '125%',
         body: 'A seamless fusion of exceptional craftsmanship, precision engineering and contemporary design — sporty on rubber, timeless on leather.',
         specs: [['Case', '42 mm octagonal'], ['Crystal', 'Sapphire, UV anti-glare'], ['Movement', 'Automatic, open-worked back'], ['Strap', 'FKM rubber, crocodile or lizard']],
-        variants: [['Black', '#22242a', 'catalog/img543.png'], ['Navy', '#1d2b52', 'catalog/img487.png'], ['Green', '#2e8a55', 'catalog/img490.png'], ['Red', '#cc2229', 'catalog/img493.png'], ['White', '#f1f1ef', 'catalog/img519.png']] },
+        variants: [['Black', '#22242a', 'img543.png'], ['Navy', '#1d2b52', 'img487.png'], ['Green', '#2e8a55', 'img490.png'], ['Red', '#cc2229', 'img493.png'], ['White', '#f1f1ef', 'img519.png']] },
       { num: '03', name: 'Fecit Potentiam', motto: 'For the purists, only the purest', size: '42 mm', imgH: '118%',
         body: 'The deep red dial in the signature octagon. For the purist who wants the movement, and nothing else, to speak.',
         specs: [['Case', '42 mm octagonal'], ['Crystal', 'Sapphire, UV anti-glare'], ['Movement', 'Automatic, open-worked back'], ['Dial', 'Deep red']],
-        variants: [['Red dial', '#b81d24', 'catalog/img566.png']] }
+        variants: [['Red dial', '#b81d24', 'img566.png']] }
     ];
     const collections = data.map((c, ci) => {
       const sel = this.state.pick[ci];

@@ -11,8 +11,8 @@
 <title>MAGAL — Tempus omnia revelat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap">
-<link rel="stylesheet" href="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/styles.css">
-<script src="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/_ds_bundle.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:'Nunito Sans','Avenir LT Pro',Avenir,sans-serif;text-wrap:pretty;background:#fff;color:#231f20;overflow-x:hidden}
@@ -52,7 +52,7 @@ a:hover{color:#5c1f1f}
   </div>
   <div style="position:relative;z-index:1;height:clamp(440px,60vw,760px)">
     <div data-float="1" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
-      <img src="catalog/img566.png" alt="MAGAL Fecit Potentiam, red dial" style="height:118%;width:auto;max-width:none;margin-left:-18%;pointer-events:none">
+      <img src="img566.png" alt="MAGAL Fecit Potentiam, red dial" style="height:118%;width:auto;max-width:none;margin-left:-18%;pointer-events:none">
     </div>
   </div>
   </section>
@@ -76,7 +76,7 @@ a:hover{color:#5c1f1f}
   <div style="position:relative;max-width:1080px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
     <figure data-reveal="up" style="margin:0;margin-top:clamp(32px,6vw,80px);box-shadow:0 30px 60px -30px rgba(0,0,0,0.35)">
       <div style="overflow:hidden;aspect-ratio:1/1">
-        <img data-parallax-img="0.08" src="catalog/img392.jpg" alt="Open-worked case back revealing the movement" style="width:100%;height:120%;object-fit:cover;display:block">
+        <img data-parallax-img="0.08" src="img392.jpg" alt="Open-worked case back revealing the movement" style="width:100%;height:120%;object-fit:cover;display:block">
       </div>
     </figure>
     <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
@@ -120,7 +120,7 @@ a:hover{color:#5c1f1f}
       <p data-reveal="up" style="font-size:15px;line-height:27px;max-width:38ch;margin:24px 0 0">Micro-grooved FKM rubber for every day, or crocodile and Louisiana lizard leather for warmth and elegance. The strap changes in seconds.</p>
     </div>
     <figure data-reveal="up" style="margin:0;box-shadow:0 30px 60px -30px rgba(0,0,0,0.35)">
-      <img src="catalog/img585.png" alt="MAGAL rubber, crocodile and lizard straps" style="width:100%;display:block">
+      <img src="img585.png" alt="MAGAL rubber, crocodile and lizard straps" style="width:100%;display:block">
     </figure>
   </div>
 </section>
@@ -213,13 +213,13 @@ class Component extends DCLogic {
   renderVals() {
     const ig = (this.props.instagram ?? 'magal').replace(/^@/, '');
     const models = [
-      { name: 'Puella, Surge', sub: 'Skeleton · Rubber strap', size: '36 mm', motto: 'Rise up, girls!', img: 'catalog/img373.png', h: '150%' },
-      { name: 'Omnia Munda', sub: 'Automatic · Rubber or leather', size: '42 mm', motto: 'All is pure, for the purest', img: 'catalog/img543.png', h: '170%' },
-      { name: 'Fecit Potentiam', sub: 'Automatic · Red dial', size: '42 mm', motto: 'For the purists, only the purest', img: 'catalog/img566.png', h: '125%' }
+      { name: 'Puella, Surge', sub: 'Skeleton · Rubber strap', size: '36 mm', motto: 'Rise up, girls!', img: 'img373.png', h: '150%' },
+      { name: 'Omnia Munda', sub: 'Automatic · Rubber or leather', size: '42 mm', motto: 'All is pure, for the purest', img: 'img543.png', h: '170%' },
+      { name: 'Fecit Potentiam', sub: 'Automatic · Red dial', size: '42 mm', motto: 'For the purists, only the purest', img: 'img566.png', h: '125%' }
     ].map(m => ({ ...m, wa: this.wa(`Hello MAGAL, I'm interested in ${m.name}.`) }));
     const colours = [
-      ['Red', '#c8202a', 'catalog/img434.png'], ['Blue', '#1f3fbf', 'catalog/img445.png'], ['Green', '#1d7a3e', 'catalog/img451.png'],
-      ['Black', '#24262b', 'catalog/img373.png'], ['Crystal', '#9a9ca3', 'catalog/img454.png']
+      ['Red', '#c8202a', 'img434.png'], ['Blue', '#1f3fbf', 'img445.png'], ['Green', '#1d7a3e', 'img451.png'],
+      ['Black', '#24262b', 'img373.png'], ['Crystal', '#9a9ca3', 'img454.png']
     ].map(([name, hex, img]) => ({ name, hex, img, wa: this.wa(`Hello MAGAL, I'm interested in Puella, Surge in ${name}.`) }));
     return { waNum: this.props.whatsapp ?? '',
       rootRef: this.rootRef,

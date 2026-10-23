@@ -9,8 +9,8 @@
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,600&display=swap">
-<link rel="stylesheet" href="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/styles.css">
-<script src="_ds/classical-6e2d3d8b-98e2-4f80-b0b4-7a799aefe802/_ds_bundle.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="_ds_bundle.js"></script>
 </helmet>
 <section data-screen-label="Six ways" style="background:{{ bg }};color:{{ fg }};font-family:'Nunito Sans','Avenir LT Pro',Avenir,sans-serif;border-top:1px solid {{ line }};border-bottom:1px solid {{ line }}">
   <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px);display:flex;flex-direction:column;gap:clamp(40px,6vh,72px)">
@@ -43,7 +43,7 @@ class Component extends DCLogic {
     const n = String(this.props.whatsapp ?? '').replace(/\D/g, '');
     const cols = [['Black', '#1c1b1d'], ['Bordeaux', '#5c1f26'], ['Navy', '#1d2b52']];
     const items = [];
-    [['Crocodile', 'catalog/img284.png'], ['Lizard', 'catalog/img285.png']].forEach(([leather, src]) =>
+    [['Crocodile', 'img284.png'], ['Lizard', 'img285.png']].forEach(([leather, src]) =>
       cols.forEach(([colour, sw], i) => items.push({
         leather, colour, sw, src, pos: ['0% 0', '50% 0', '100% 0'][i],
         n: String(items.length + 1).padStart(2, '0'),
